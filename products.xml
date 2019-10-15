@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+<product>
+	<id><![CDATA[68]]></id>
+	<quantity notFilterable="true"><![CDATA[0]]></quantity>
+	<price><![CDATA[13.400000]]></price>
+	<name><language id="2" ><![CDATA[ProductName]]></language></name>
+	<description><language id="2" ><![CDATA[<strong>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum]]></language></description>
+</product>
+<product>
+	<id><![CDATA[69]]></id>
+	<quantity notFilterable="true"><![CDATA[0]]></quantity>
+	<price><![CDATA[20.300000]]></price>
+	<name><language id="2" ><![CDATA[ProductName]]></language></name>
+	<description><language id="2" ><![CDATA[<strong>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum]]></language></description>
+</product>
+<product>
+	<id><![CDATA[70]]></id>
+	<quantity notFilterable="true"><![CDATA[0]]></quantity>
+	<price><![CDATA[24.800000]]></price>
+	<name><language id="2" ><![CDATA[ProductName]]></language></name>
+	<description><language id="2" ><![CDATA[<strong>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum]]></language></description>
+</product>
+<product>
+	<id><![CDATA[44]]></id>
+	<quantity notFilterable="true"><![CDATA[0]]></quantity>
+	<price><![CDATA[6.311475]]></price>
+	<name><language id="2" ><![CDATA[ProductName]]></language></name>
+	<description><language id="2" ><![CDATA[<strong>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum]]></language></description>
+</product>
+</products>

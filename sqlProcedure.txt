@@ -1,0 +1,27 @@
+SQL Procedure with 1 parameter: productsXml.. (Xml file contain product list)
+
+BEGIN
+
+  DECLARE totalProducts INT ;
+  DECLARE productIndex INT ;
+
+  SET totalProducts = ExtractValue(productsXml, 'count(//prestashop/products/product)') ;
+
+  SET productIndex = 1 ;
+  WHILE productIndex <= totalProducts DO
+        -- Fetch the product's id first for later use in the related tables (images & options).
+        SET @productId = CAST(ExtractValue(productsXml, 'prestashop/products/product[$productIndex]/id') AS UNSIGNED) ;
+
+        INSERT INTO products(`Id`,`name`,`price`,`quantity`, `description` )
+        VALUES(
+                @productId,
+                ExtractValue(productsXml, 'prestashop/products/product[$productIndex]/name/language'),
+                ExtractValue(productsXml, 'prestashop/products/product[$productIndex]/price'),
+                ExtractValue(productsXml, 'prestashop/products/product[$productIndex]/quantity'),
+                ExtractValue(productsXml, 'prestashop/products/product[$productIndex]/description')
+              );
+
+        SET productIndex = productIndex + 1 ;
+
+  END WHILE ;
+END

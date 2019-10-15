@@ -1,0 +1,10 @@
+SQL Event - Update products table 
+
+// Event will run sql procedure 2 times a day.
+
+BEGIN
+	SET
+	@productsXml = LOAD_FILE('/Applications/XAMPP/xamppfiles/htdocs/PHP/products.xml');
+CALL
+	SyncProductsDataFromXML(@productsXml);
+END
